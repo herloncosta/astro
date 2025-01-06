@@ -1,4 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import Menu from "../components/Menu.astro";
+
 const pageTitle = "Meu Blog de Aprendizado sobre Astro";
 ---
 
@@ -9,18 +12,20 @@ const pageTitle = "Meu Blog de Aprendizado sobre Astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <a href="/">Início</a>
-    <a href="/about/">Sobre</a>
-    <a href="/blog/">Blog</a>
+  <body class="bg-slate-900 text-slate-50 h-screen flex flex-col">
+    <Menu />
 
-    <h1>{pageTitle}</h1>
-    <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
+    <main class="container mx-auto py-10 flex-1">
+      <h1 class="text-xl font-bold">{pageTitle}</h1>
+      <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
 
-    <ul>
-      <li><a href="/posts/post-1/">Postagem 1</a></li>
-      <li><a href="/posts/post-2/">Postagem 2</a></li>
-      <li><a href="/posts/post-3/">Postagem 3</a></li>
-    </ul>
+      <ul class="mt-10">
+        <li><a href="/posts/post-1/">Postagem 1</a></li>
+        <li><a href="/posts/post-2/">Postagem 2</a></li>
+        <li><a href="/posts/post-3/">Postagem 3</a></li>
+      </ul>
+    </main>
+
+    <Footer />
   </body>
 </html>
